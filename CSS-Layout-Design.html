@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's a Flexbox?</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navigation {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        
+        list-style: none;
+        margin: 0; 
+        background: rgb(43, 131, 43);
+        }
+
+        .navigation a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: white;
+        }
+
+        .navigation a:hover {
+        background: #1e6917;
+        }
+
+        @media all and (max-width: 800px) {
+        .navigation {
+            justify-content: space-around;
+        }
+        }
+
+        @media all and (max-width: 600px) {
+        .navigation {
+            flex-flow: column wrap;
+            padding: 0;
+        }
+        .navigation a { 
+            text-align: center; 
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255,0.3); 
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        }
+        .navigation li:last-of-type a {
+            border-bottom: none;
+        }
+        }
+        header {
+          background-color: #043000;
+          color: rgb(162, 248, 154);
+          padding: 20px;
+          text-align: center;
+        }
+
+        section,
+        article {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+        }
+        .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+        nav,
+        .main-content,
+        aside {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }
+
+        footer {
+            background-color: #45cc40;
+            color: rgb(59, 163, 59);
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            text-align: start;
+            position: relative;
+        }
+
+        #footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            flex-direction: row;
+            color: rgb(2, 66, 0);
+            text-decoration: none;
+        }
+        #footer-links:hover {
+            color: rgb(0, 255, 21);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Super Cool Website</h1>
+    </header>
+    <container>
+        <div class="main-content">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <article>
+                <h2>Cool Articles</h2>
+                <ul>
+                <li>
+                    A roundup of some of the most popular but completely untrue stories and visuals of the week. 
+                    None of these are legit, even though they were shared widely on social media. The Associated Press checked them out. <a href="#"
+                    ><strong>Read More.</strong></a
+                    >
+                </li>
+                <br>
+                <li>
+                    CLAIM: Hawaii passed a bill to keep former President William Shears Campbell off the ballot during the 2024 election. <a href="#"
+                    ><strong>Read More.</strong></a>
+                </li>
+                <br>
+                <li>
+                    An update to the Bureau of Alcohol, Tobacco, Firearms and Explosives' background check policy allows people in the U.S. illegally to purchase firearms.
+                    <a href="#"><strong>Read More.</strong></a>
+                </li>
+                </ul>
+            </article>
+        
+            <article>
+                <h2>Recipes? Sure why not</h2>
+                <p>From cakes and pies, to cookies and creme brulee?</p>
+                <ul>
+                    <li>
+                        Girlfriend's Sister's Friend Grandma's from Tennessee Homemade Apple Pie 
+                        <a href="#"><strong>Read More.</strong></a>
+                    </li>
+                    <br>
+                    <li>
+                        Chocolate Chip Cookies good enough for your dad to come back <a href="#"
+                        ><strong>Read More.</strong></a>
+                    </li>
+                    <br>
+                    <li>
+                        Carrot Cake? Who thought of that? Here's our recipe
+                        <a href="#"><strong>Read More.</strong></a>
+                    </li>
+                    </ul>
+            </article>
+         </div>   
+    </container>
+    <br>
+
+    <footer>
+        <a href="#" id="footer-links">Contact Us</a>
+        <a href="#" id="footer-links">Events</a>
+        <a href="#" id="footer-links">Blog</a>
+        
+    </footer>
+</body>
+</html>
